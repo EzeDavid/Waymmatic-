@@ -1,0 +1,17 @@
+RewriteEngine On
+
+
+RewriteCond %{HTTPS} off
+
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+RewriteCond %{HTTP_HOST} ^waymmatic.com [NC]
+
+RewriteRule ^(.*)$ https://www.waymmatic.com$1 [L,R=301]
+
+RewriteCond %{HTTP_HOST} ^107\.180\.26\.181
+RewriteRule (.*) https://www.waymmatic.com$1 [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^waymmatic.com\index.html [NC]
+
+RewriteRule (.*) https://www.waymmatic.com$1 [R=301,L]

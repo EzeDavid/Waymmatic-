@@ -1,0 +1,3 @@
+User-agent: *
+Disallow:
+Sitemap: https://www.waymmmatic.com.com/sitemap.xml
